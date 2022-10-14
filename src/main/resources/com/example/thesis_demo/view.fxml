@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.thesis_demo.Controller">
    <children>
       <HBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -65,7 +65,7 @@
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField fx:id="scoreTextField1" prefHeight="30.0" prefWidth="40.0">
+                  <TextField fx:id="matScoreTextField" prefHeight="30.0" prefWidth="40.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -78,7 +78,7 @@
                         <Insets bottom="10.0" left="30.0" top="10.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField fx:id="scoreTextField2" layoutX="63.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0">
+                  <TextField fx:id="phyScoreTextField" layoutX="63.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -95,7 +95,7 @@
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField fx:id="scoreTextField3" prefHeight="30.0" prefWidth="40.0">
+                  <TextField fx:id="cheScoreTextField" prefHeight="30.0" prefWidth="40.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -108,7 +108,7 @@
                         <Insets bottom="10.0" left="30.0" top="10.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField fx:id="scoreTextField4" layoutX="63.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0">
+                  <TextField fx:id="bioScoreTextField" layoutX="63.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -125,7 +125,7 @@
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField fx:id="scoreTextField5" prefHeight="30.0" prefWidth="40.0">
+                  <TextField fx:id="litScoreTextField" prefHeight="30.0" prefWidth="40.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -138,7 +138,7 @@
                         <Insets bottom="10.0" left="30.0" top="10.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField fx:id="scoreTextField6" layoutX="63.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0">
+                  <TextField fx:id="hisScoreTextField" layoutX="63.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -155,7 +155,7 @@
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField fx:id="scoreTextField7" prefHeight="30.0" prefWidth="40.0">
+                  <TextField fx:id="geoScoreTextField" prefHeight="30.0" prefWidth="40.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -168,7 +168,7 @@
                         <Insets bottom="10.0" left="30.0" top="10.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField fx:id="scoreTextField8" layoutX="63.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0">
+                  <TextField fx:id="engScoreTextField" layoutX="63.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -181,7 +181,7 @@
             <HBox prefHeight="0.0" prefWidth="600.0">
                <children>
                   <Button fx:id="resetButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" text="Nhập lại" />
-                  <Button fx:id="submitButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" text="Tra cứu">
+                  <Button id="submitButton" fx:id="submitButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="26.0" prefWidth="105.0" text="Tra cứu">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>
