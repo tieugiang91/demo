@@ -180,7 +180,7 @@
             </HBox>
             <HBox prefHeight="0.0" prefWidth="600.0">
                <children>
-                  <Button fx:id="resetButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="105.0" text="Nhập lại" />
+                  <Button fx:id="resetButton" mnemonicParsing="false" onAction="#handleResetButtonAction" prefHeight="26.0" prefWidth="105.0" text="Nhập lại" />
                   <Button id="submitButton" fx:id="submitButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="26.0" prefWidth="105.0" text="Tra cứu">
                      <HBox.margin>
                         <Insets left="50.0" />
@@ -213,7 +213,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngành nghề nên chọn:" wrappingWidth="380.0">
+                  <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngành nghề nên chọn:" wrappingWidth="380.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>

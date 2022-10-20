@@ -1,8 +1,10 @@
 package com.example.thesis_demo;
 
+import com.example.thesis_demo.model.Record;
 import javafx.fxml.*;
 import javafx.event.*;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 
 import java.io.File;
 import java.io.InputStream;
@@ -23,7 +25,20 @@ public class Controller implements Initializable {
     @FXML private TextField hisScoreTextField;
     @FXML private TextField geoScoreTextField;
     @FXML private TextField engScoreTextField;
+    @FXML private RadioButton maleRadioButton;
+    @FXML private RadioButton femaleRadioButton;
     @FXML private Button submitButton;
+    @FXML private Text text;
+
+    private String name;
+    private int matScore;
+    private int phyScore;
+    private int cheScore;
+    private int bioScore;
+    private int litScore;
+    private int hisScore;
+    private int geoScore;
+    private int engScore;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -34,15 +49,22 @@ public class Controller implements Initializable {
     }
 
     @FXML protected void handleSubmitButtonAction(ActionEvent event) {
-        System.out.println(nameTextField.getText());
-        System.out.println(matScoreTextField.getText());
-        System.out.println(phyScoreTextField.getText());
-        System.out.println(cheScoreTextField.getText());
-        System.out.println(bioScoreTextField.getText());
-        System.out.println(litScoreTextField.getText());
-        System.out.println(hisScoreTextField.getText());
-        System.out.println(geoScoreTextField.getText());
-        System.out.println(engScoreTextField.getText());
+        text.setText("Ngành nghề nên chọn:");
+        name = nameTextField.getText();
+        matScore = Integer.parseInt(matScoreTextField.getText());
+        phyScore = Integer.parseInt(phyScoreTextField.getText());
+        cheScore = Integer.parseInt(cheScoreTextField.getText());
+        bioScore = Integer.parseInt(bioScoreTextField.getText());
+        litScore = Integer.parseInt(litScoreTextField.getText());
+        hisScore = Integer.parseInt(hisScoreTextField.getText());
+        geoScore = Integer.parseInt(geoScoreTextField.getText());
+        engScore = Integer.parseInt(engScoreTextField.getText());
+        String str = "Tên: " + name + ", Toán: " + matScore + ", Lí: " + phyScore
+                + ", Hóa: " + cheScore + ", Sinh: " + bioScore
+                + ", Văn: " + litScore + ", Sử: " + hisScore
+                + ", Địa: " + geoScore + ", NN: " + engScore;
+        text.setText(text.getText() + " " + str);
+//        reset();
     }
 
     UnaryOperator<TextFormatter.Change> numberValidationFormatter = change -> {
@@ -58,4 +80,21 @@ public class Controller implements Initializable {
         }
     };
 
+    public void handleResetButtonAction(ActionEvent event) {
+        reset();
+    }
+
+    private void reset() {
+        nameTextField.setText("");
+        matScoreTextField.setText("");
+        phyScoreTextField.setText("");
+        cheScoreTextField.setText("");
+        bioScoreTextField.setText("");
+        litScoreTextField.setText("");
+        hisScoreTextField.setText("");
+        geoScoreTextField.setText("");
+        engScoreTextField.setText("");
+        maleRadioButton.setSelected(false);
+        femaleRadioButton.setSelected(false);
+    }
 }
