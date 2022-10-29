@@ -1,0 +1,24 @@
+@relation 'testdata'
+
+@attribute Toan {Gioi,Kha,TB,Yeu}
+@attribute Li {Gioi,Kha,TB,Yeu}
+@attribute Hoa {Gioi,Kha,TB,Yeu}
+@attribute Sinh {Gioi,Kha,TB,Yeu}
+@attribute Van {Gioi,Kha,TB,Yeu}
+@attribute Su {Gioi,Kha,TB,Yeu}
+@attribute Dia {Gioi,Kha,TB,Yeu}
+@attribute Ngoai_Ngu {Gioi,Kha,TB,Yeu}
+@attribute Nganh_Holland {'Kinh doanh','Nghiên cứu','Xã hội','Kỹ thuật','Nghiệp vụ','Nghệ thuật'}
+
+@data
+Gioi,Gioi,Gioi,Gioi,Kha,Kha,TB,Kha,?
+Kha,Gioi,Gioi,Kha,Kha,Kha,Gioi,Kha,?
+Gioi,TB,Gioi,Gioi,Gioi,Gioi,Gioi,Kha,?
+TB,Gioi,Kha,Gioi,Kha,Gioi,Gioi,Gioi,?
+Kha,Gioi,Gioi,Gioi,TB,Kha,Yeu,Kha,?
+Gioi,Kha,Gioi,Gioi,Kha,Gioi,Kha,Kha,?
+Yeu,Gioi,Gioi,Gioi,Kha,Kha,Gioi,Kha,?
+Gioi,Gioi,Gioi,Kha,Kha,Kha,Gioi,Kha,?
+TB,Yeu,Gioi,Gioi,Kha,Gioi,Gioi,Kha,?
+Kha,Gioi,Kha,Kha,Gioi,Kha,Gioi,Gioi,?
+Gioi,Gioi,Gioi,Gioi,Kha,Gioi,Gioi,Kha,?

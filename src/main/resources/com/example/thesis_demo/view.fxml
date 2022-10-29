@@ -13,6 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.collections.FXCollections?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.thesis_demo.Controller">
    <children>
       <HBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -203,17 +204,17 @@
             </TableView>
             <VBox prefHeight="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kết quả tư vấn" wrappingWidth="380.0">
+                  <Text fx:id="textHolland" strokeType="OUTSIDE" strokeWidth="0.0" text="Kết quả tư vấn:" wrappingWidth="380.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Khối thi:" wrappingWidth="380.0">
+                  <Text fx:id="textKhoiThi" strokeType="OUTSIDE" strokeWidth="0.0" text="Khối thi:" wrappingWidth="380.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngành nghề nên chọn:" wrappingWidth="380.0">
+                  <Text fx:id="textNganh" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngành nghề nên chọn:" wrappingWidth="380.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -240,6 +241,9 @@
                   <TableColumn fx:id="tableColumn23" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Mã trường" />
                   <TableColumn fx:id="tableColumn24" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Tên trường" />
                </columns>
+               <items>
+                  <FXCollections fx:factory="observableArrayList"></FXCollections>
+               </items>
             </TableView>
          </children>
       </AnchorPane>
