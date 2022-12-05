@@ -185,6 +185,18 @@ public class Controller implements Initializable {
         Instances dataset = mg.loadDataset(TESTDATA_PATH);
         ModelClassifier cls = new ModelClassifier();
         String nganhHolland = cls.classify(dataset.lastInstance(), MODEL_PATH);
+        float tlhAvg = (scores[0] + scores[1] + scores[2])/3;
+        float tvaAvg = (scores[0] + scores[4] + scores[7])/3;
+        float vsdAvg = (scores[4] + scores[5] + scores[6])/3;
+        if (tlhAvg > Math.max(tvaAvg, vsdAvg)) {
+            nganhHolland = "Kỹ thuật";
+        }
+        if (tvaAvg > Math.max(tlhAvg, vsdAvg)) {
+            nganhHolland = "Kinh doanh";
+        }
+        if (vsdAvg > Math.max(tvaAvg, tlhAvg)) {
+            nganhHolland = "Xã Hội";
+        }
         textHolland.setText(textHolland.getText() + " " + nganhHolland);
 
         List<Record> filteredRecords = FloorPointParser.filter(nganhHolland, scores, records);
