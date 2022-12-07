@@ -190,11 +190,9 @@ public class Controller implements Initializable {
         float vsdAvg = (scores[4] + scores[5] + scores[6])/3;
         if (tlhAvg > Math.max(tvaAvg, vsdAvg)) {
             nganhHolland = "Kỹ thuật";
-        }
-        if (tvaAvg > Math.max(tlhAvg, vsdAvg)) {
+        } else if (tvaAvg > Math.max(tlhAvg, vsdAvg)) {
             nganhHolland = "Kinh doanh";
-        }
-        if (vsdAvg > Math.max(tvaAvg, tlhAvg)) {
+        } else if (vsdAvg > Math.max(tvaAvg, tlhAvg)) {
             nganhHolland = "Xã Hội";
         }
         textHolland.setText(textHolland.getText() + " " + nganhHolland);
