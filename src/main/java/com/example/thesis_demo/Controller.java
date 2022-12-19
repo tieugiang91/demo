@@ -36,6 +36,9 @@ public class Controller implements Initializable {
     @FXML private TextField engScoreTextField;
     @FXML private RadioButton maleRadioButton;
     @FXML private RadioButton femaleRadioButton;
+    @FXML private TextField talentScoreTextField;
+    @FXML private TextField overallTextField;
+    @FXML private TextField behaviorTextField;
     @FXML private Button submitButton;
     @FXML private Text textHolland;
     @FXML private Text textKhoiThi;
@@ -53,14 +56,6 @@ public class Controller implements Initializable {
     @FXML private TableColumn tableColumn24;
 
     private String name;
-    private double matScore;
-    private double phyScore;
-    private double cheScore;
-    private double bioScore;
-    private double litScore;
-    private double hisScore;
-    private double geoScore;
-    private double engScore;
     private List<Record> records;
 
     @Override
@@ -130,6 +125,9 @@ public class Controller implements Initializable {
         hisScoreTextField.setText("");
         geoScoreTextField.setText("");
         engScoreTextField.setText("");
+        talentScoreTextField.setText("");
+        overallTextField.setText("");
+        behaviorTextField.setText("");
         maleRadioButton.setSelected(false);
         femaleRadioButton.setSelected(false);
     }
@@ -168,6 +166,7 @@ public class Controller implements Initializable {
         scores[5] = Float.parseFloat(hisScoreTextField.getText());
         scores[6] = Float.parseFloat(geoScoreTextField.getText());
         scores[7] = Float.parseFloat(engScoreTextField.getText());
+//        scores[8] = Float.parseFloat(talentScoreTextField.getText());
         return scores;
     }
 
@@ -188,11 +187,14 @@ public class Controller implements Initializable {
         float tlhAvg = (scores[0] + scores[1] + scores[2])/3;
         float tvaAvg = (scores[0] + scores[4] + scores[7])/3;
         float vsdAvg = (scores[4] + scores[5] + scores[6])/3;
-        if (tlhAvg > Math.max(tvaAvg, vsdAvg)) {
+        float ntScore = Float.parseFloat(talentScoreTextField.getText());
+        if (ntScore > 8.9) {
+            nganhHolland = "Nghệ thuật";
+        } else if (tlhAvg > Math.max(tvaAvg, vsdAvg) + 0.5) {
             nganhHolland = "Kỹ thuật";
-        } else if (tvaAvg > Math.max(tlhAvg, vsdAvg)) {
+        } else if (tvaAvg > Math.max(tlhAvg, vsdAvg) + 0.5) {
             nganhHolland = "Kinh doanh";
-        } else if (vsdAvg > Math.max(tvaAvg, tlhAvg)) {
+        } else if (vsdAvg > Math.max(tvaAvg, tlhAvg) + 0.5) {
             nganhHolland = "Xã Hội";
         }
         textHolland.setText(textHolland.getText() + " " + nganhHolland);

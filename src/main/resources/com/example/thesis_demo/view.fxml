@@ -61,7 +61,7 @@
             </HBox>
             <HBox prefHeight="0.0" prefWidth="600.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Toán:" wrappingWidth="31.31283950805664">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Toán:" wrappingWidth="68.91281700134277">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin>
@@ -91,7 +91,7 @@
             </HBox>
             <HBox prefHeight="0.0" prefWidth="600.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hóa:" wrappingWidth="31.31283950805664">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hóa:" wrappingWidth="68.91281700134277">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin>
@@ -121,7 +121,7 @@
             </HBox>
             <HBox prefHeight="0.0" prefWidth="600.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Văn:" wrappingWidth="31.31283950805664">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Văn:" wrappingWidth="68.91281700134277">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin>
@@ -151,7 +151,7 @@
             </HBox>
             <HBox prefHeight="0.0" prefWidth="600.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Địa:" wrappingWidth="31.31283950805664">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Địa:" wrappingWidth="68.91281700134277">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" top="10.0" />
                      </HBox.margin>
@@ -175,6 +175,53 @@
                      </opaqueInsets>
                      <HBox.margin>
                         <Insets bottom="10.0" left="9.0" right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="0.0" prefWidth="600.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Năng khiếu:" wrappingWidth="68.91281700134277">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="talentScoreTextField" prefHeight="30.0" prefWidth="40.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text layoutX="20.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Học lực:" wrappingWidth="68.91281700134277">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="30.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="overallTextField" layoutX="63.0" layoutY="15.0" prefHeight="30.0" prefWidth="40.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="9.0" right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="0.0" prefWidth="600.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hạnh kiểm:" wrappingWidth="68.91281700134277">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="behaviorTextField" prefHeight="30.0" prefWidth="40.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
                      </HBox.margin>
                   </TextField>
                </children>
